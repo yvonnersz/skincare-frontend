@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { fetchProducts } from '../actions/fetchProducts';
+import Products from './Products';
 
 class Home extends React.Component {
     componentDidMount() {
@@ -11,7 +12,7 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                Home
+                <Products products={this.props.products} />
             </div>
         )
     }
