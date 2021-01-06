@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 
 import NavBar from './components/NavBar';
 import Home from './components/Home';
+import Products from './components/Products';
+import ProductShow from './components/ProductShow';
 
 import { fetchProducts } from './actions/fetchProducts';
 
@@ -20,7 +22,8 @@ class App extends React.Component {
   
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/products/:id' render={(routerProps) => <ProductShow {...routerProps} posts={this.props.posts} />} />
+          <Route path='/products/:id' render={(routerProps) => <ProductShow {...routerProps} products={this.props.products} />} />
+          <Route path='/products' render={(routerProps) => <Products {...routerProps} products={this.props.products} />} />
         </Switch>
       </div>
     );
