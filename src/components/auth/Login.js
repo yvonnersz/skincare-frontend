@@ -47,6 +47,8 @@ class Login extends React.Component {
                     <input type='password' name='password' value={this.state.password} placeholder='Enter password' onChange={this.handleChange} />
                     <input type='submit' value='Login' />
                 </form>
+
+                <span>Don't have an account? Register <a href='/registration'>here</a>.</span>
             </div>
         )
     }
