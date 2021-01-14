@@ -5,7 +5,8 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                Home
+                <p>Home</p>
+                {this.props.loggedInStatus}
             </div>
         )
     }

@@ -37,6 +37,7 @@ class Registration extends React.Component {
     }
 
     handleSuccessfulAuth(data) {
+        this.props.handleLogin(data);
         this.props.history.push('/');
     }
 
