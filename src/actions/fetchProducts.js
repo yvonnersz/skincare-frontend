@@ -1,6 +1,6 @@
 export function fetchProducts() {
     return (dispatch) => {
-        fetch('http://localhost:3001/products')
+        fetch('http://localhost:3000/products')
         .then(response => response.json())
         .then(products => dispatch({
             type: 'FETCH_PRODUCTS', 
