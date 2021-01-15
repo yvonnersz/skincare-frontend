@@ -31,14 +31,10 @@ class Registration extends React.Component {
         {withCredentials: true}
         ).then(response => {
             if (response.data.status === 'created') {
-                this.handleSuccessfulAuth(response.data);
+                this.props.handleLogin(response.data);
+                this.props.history.push('/');
             }
         })
-    }
-
-    handleSuccessfulAuth(data) {
-        this.props.handleLogin(data);
-        this.props.history.push('/');
     }
 
     render() {

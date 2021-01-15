@@ -29,14 +29,10 @@ class Login extends React.Component {
         {withCredentials: true}
         ).then(response => {
             if (response.data.logged_in) {
-                this.handleSuccessfulAuth(response.data)
+                this.props.handleLogin(response.data);
+                this.props.history.push('/')
             }
         })
-    }
-
-    handleSuccessfulAuth(data) {
-        this.props.handleLogin(data);
-        this.props.history.push('/')
     }
 
     render() {
